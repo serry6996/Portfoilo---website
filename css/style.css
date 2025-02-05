@@ -13,6 +13,7 @@ body{
   --fontweight: 700;
 }
 
+
 h1 {
     font-size: 30px;
     font-weight:var(--fontweight);
@@ -98,10 +99,7 @@ button:hover , button:focus ,.button:hover,.button:focus{
   .profile-picture{
     float: left;
     border-radius: 50%;
-    
-   min-width: 100px;
-   max-width: 400px;
-    
+    width: 100%;
   }
   .page-footer{
     clear: both;
@@ -140,6 +138,10 @@ button:hover , button:focus ,.button:hover,.button:focus{
  .sun{
   animation: 4s color-change infinite alternate linear;
  }
+ .error-message {
+  color: red;
+  font-size: 0.8em;
+}
  @keyframes color-change
  {
   0% {
@@ -160,6 +162,99 @@ button:hover , button:focus ,.button:hover,.button:focus{
 .cloud-back{
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
+#contact-form {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto auto;
+}
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+input, textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  display: flex;
+  opacity: 1;
+
+}
+
+.modal {
+  background-color: white;
+  padding: 25px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: auto auto;
+  z-index: 9999;
+}
+.modal h1 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.modal button {
+  background-color: #28a745;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.modal button:hover {
+  background-color: #218838;
+}
+
+.modal button:active {
+  background-color: #1e7e34;
+}
+
 @keyframes cloud-move-reverse{
   from {
     transform: translate(446px, 48px);

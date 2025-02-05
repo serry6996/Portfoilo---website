@@ -25,29 +25,40 @@
         </nav>
     </header> 
     <main>
-        <form action="" method="post" id="contact-form">
-
-            <label for="email">E-mail</label>
-            <input type="email" name="usermail" id="email" required>
-
-            <label for="tel">Telephone</label>
-            <input type="tel" name="userphone" id="tel" required>
-            
-            <label for="message">Message</label>
-            <textarea name="sendmessage" id="message" maxlength="300"></textarea>
-
-            <input type="submit" value="sendmessage">
-
+        
         <h1>Get in touch with me</h1>
         <p>It is easy to reach me as you will find me in most of the social media platforms</p>
         <a href="mailto:abdullahserry.org@gmail.com">Email: abdullahserry.org@gmail.com</a><br>
         <a href="tel:+201002004958">Tel: +20 100 200 4958</a><br>
-        <address>2Nazlit El Sisi Egypt 12557</address>
-        </form>             
+        <address>2Nazlit El Sisi Egypt 12557</address> 
+
+        <div id="modal-container"></div>
+        
+        <form  id="contact-form">
+
+            
+           <div class="input-wrapper">
+              <label for="email">E-mail</label>
+              <input  id="email" >
+           </div>
+
+            <div class="input-wrapper">
+              <label for="tel">Telephone</label>
+              <input  id="tel" >
+            </div>
+            
+            <label for="message">Message</label>
+            <textarea  id="message" ></textarea>
+
+            <button>Submit</button>
+   
+        </form>
+        
     </main>
     <footer>
 
     </footer>
     <script src="js/tota11y.min.js"></script>
+    <script src="js/script.js"></script>
 </body>    
 </html>
